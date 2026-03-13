@@ -1,0 +1,57 @@
+:root {
+  --color-background: #2c3e50;
+  --color-text: #ffffff;
+  --color-secondary: #ecf0f1;
+  --color-card: rgba(255,255,255,0.05);
+
+  --font-main: system-ui, Arial, sans-serif;
+  --font-clock: monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: var(--color-background);
+  color: var(--color-text);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: var(--color-card);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.clock {
+  font-family: var(--font-clock);
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  transition: all 0.3s ease;
+}
+
+.description {
+  margin-top: 15px;
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+@media (max-width: 480px) {
+  .clock {
+    font-size: 48px;
+  }
+}
